@@ -280,12 +280,12 @@
     /* ── Sidebar (transparent on mobile) ── */
     #sidebar { display: contents; }
 
-    /* ── iPad native app three-column layout (sidebar | board | mirror) ── */
+    /* ── Tablet / desktop three-column layout (sidebar | board | mirror) ── */
     @media (min-width: 744px) {
-      body.is-native {
+      body {
         --cell: clamp(36px, min(
           calc((100vw - 396px) / 7),
-          calc((100vh - 104px) / 6)
+          calc((100dvh - 80px) / 6)
         ), 130px);
         display: grid;
         grid-template-columns: 130px auto 130px;
@@ -294,7 +294,7 @@
         padding: 16px;
         gap: 16px;
       }
-      body.is-native #sidebar {
+      #sidebar {
         grid-column: 1;
         justify-self: stretch;
         display: flex;
@@ -302,14 +302,14 @@
         align-items: center;
         gap: 8px;
       }
-      body.is-native #wrap { grid-column: 2; }
-      body.is-native #sidebar h1          { font-size: 1rem; letter-spacing: 1px; margin-bottom: 0; white-space: normal; text-align: center; }
-      body.is-native #sidebar #sub        { margin-bottom: 4px; }
-      body.is-native #sidebar #turn-bar   { margin-bottom: 0; }
-      body.is-native #sidebar #scores     { margin-top: 4px; }
-      body.is-native #sidebar #controls   { margin-top: 4px; }
-      body.is-native #sidebar .toggle-bar { flex-direction: column; width: 100%; }
-      body.is-native #sidebar .toggle-btn { width: 100%; text-align: center; }
+      #wrap { grid-column: 2; }
+      #sidebar h1          { font-size: 1rem; letter-spacing: 1px; margin-bottom: 0; white-space: normal; text-align: center; }
+      #sidebar #sub        { margin-bottom: 4px; }
+      #sidebar #turn-bar   { margin-bottom: 0; }
+      #sidebar #scores     { margin-top: 4px; }
+      #sidebar #controls   { margin-top: 4px; }
+      #sidebar .toggle-bar { flex-direction: column; width: 100%; }
+      #sidebar .toggle-btn { width: 100%; text-align: center; }
     }
 
     /* ── Online Modal ── */
